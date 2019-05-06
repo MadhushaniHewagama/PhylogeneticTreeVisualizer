@@ -1,0 +1,6 @@
+   104   13
+Aa         AACGTGGCCACAT
+Ba         GAGGTCGCCACAC
+Ca         CAGTTCGCCACAA
+Da         GAGATTTCCGCCT
+Ea         GAGATCTCCGCCC

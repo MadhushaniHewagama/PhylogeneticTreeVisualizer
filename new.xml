@@ -1,0 +1,40 @@
+<phyloxml xmlns="http://www.phyloxml.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.phyloxml.org http://www.phyloxml.org/1.10/phyloxml.xsd">
+  <phylogeny rooted="true">
+    <clade>
+      <name>Inner4</name>
+      <branch_length>0</branch_length>
+      <clade>
+        <name>Inner1</name>
+        <branch_length>0.18749999999999994</branch_length>
+        <clade>
+          <name>Epsilon</name>
+          <branch_length>0.07692307692307693</branch_length>
+        </clade>
+        <clade>
+          <name>Delta</name>
+          <branch_length>0.07692307692307693</branch_length>
+        </clade>
+      </clade>
+      <clade>
+        <name>Inner3</name>
+        <branch_length>0.11057692307692304</branch_length>
+        <clade>
+          <name>Inner2</name>
+          <branch_length>0.038461538461538464</branch_length>
+          <clade>
+            <name>Gamma</name>
+            <branch_length>0.11538461538461536</branch_length>
+          </clade>
+          <clade>
+            <name>Beta</name>
+            <branch_length>0.11538461538461536</branch_length>
+          </clade>
+        </clade>
+        <clade>
+          <name>Alpha</name>
+          <branch_length>0.15384615384615383</branch_length>
+        </clade>
+      </clade>
+    </clade>
+  </phylogeny>
+</phyloxml>

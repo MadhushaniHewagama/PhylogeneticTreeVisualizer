@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+<head>
+    <script type = "text/javascript" src = "{{ url_for('static', filename = 'js/main.js') }}" ></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/selectFormat.css') }}">
+</head>
+{% block body %}
+<div class="jumbotron text-center">
+  <form class="form-inline" method="POST" action="http://localhost:5000/PhylogeneticTree">
+    <div class="form-group">
+      
+      <div class="input-group">
+          <span class="input-group-addon">Select Tree format</span>
+              <select name="comp_select" class="selectpicker form-control">
+                {% for o in data %}
+                <option value="{{ o.name }}">{{o.name}}</option>
+                {% endfor %}
+              </select>
+      </div>
+      <button type="submit" class="btn btn-secondary" title="create phylogenetic tree">Go</button>
+    </div>
+    
+  </form>
+
+</div>
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="/static/images/circular_phyloxml.png" style="width:100%">
+    <div class="text">Caption Text</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="/static/images/rectangular_phyloxml.png" style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    
+  </div>
+  
+
+  {% endblock %}

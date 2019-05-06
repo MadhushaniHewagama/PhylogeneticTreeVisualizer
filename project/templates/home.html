@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="jumbotron text-center">
+    <h1>Phylogenetic Tree Visualizer</h1>
+    <form action="http://localhost:5000/SelectFormat" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" />
+        <input type="submit" value="subimt and view"  />
+    </form>
+    {% if error %}
+         <p><strong>Error:</strong> {{ error }}
+      {% endif %}
+      <form action="http://localhost:5000/confirm" method="POST" enctype="multipart/form-data">
+        
+        <button type="submit" class="btn btn-secondary" title='confirm data'>Go</button>
+    </form> 
+    
+</div>
+{% if file_content %}
+    <div class="panel panel-default" style=" width: 800px; margin-bottom: 100px;    margin-left: 300px; " >
+        <div class="panel-heading panel-heading-custom" style="background-color:rgb(36, 33, 33);" >
+           <h3 class="panel-title" style="color:white" >Data set</h3>
+        </div>
+        <div class="panel-body" style="background-color:rgb(141, 137, 137); ">
+            {% for content in file_content%}
+            {{content}}
+            </br>
+            {%endfor%}
+        </div>
+     </div>
+    
+    {% endif %}
+
+{% endblock %}
